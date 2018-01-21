@@ -2,8 +2,7 @@
   "thumbnail": "https://wnow-modules.s3.amazonaws.com/icon_stroke_news_articlelist.svg",
   "tag": "new",
   "isHeaderComponent": true,
-  "id": "components/core/CollapsibleHeader",
-  "affiliates":["kotv"],
+  "affiliates":["kotv , franklyqa"],
   "propTypes": {
 		"enableSearch": "PropTypes.bool",
 		"backgroundColor": "PropTypes.string",
