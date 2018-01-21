@@ -1,31 +1,73 @@
 {
   "thumbnail": "https://wnow-modules.s3.amazonaws.com/icon_stroke_news_articlelist.svg",
   "tag": "new",
+  "isHeaderComponent": true,
   "affiliates":["kotv"],
   "propTypes": {
-    "title": "PropTypes.string",
-    "layout": "PropTypes.string"
+		"enableSearch": "PropTypes.bool",
+		"backgroundColor": "PropTypes.string",
+		"subNavstackBackgroundColor": "PropTypes.string",
+		"textColor": "PropTypes.string",
+		"borderOptions": "PropTypes.object",
+		"menuItemStyle": "PropTypes.object",
+		"menuItemHoverStyle": "PropTypes.object",
+		"searchOptions": "PropTypes.object",
+		"menu": "PropTypes.array",
+		"collapseNavigation": "PropTypes.bool",
+		"weatherWidget": "PropTypes.object",
+		"gridIconColor": "PropTypes.string",
+		"enableDropDownMenu": "PropTypes.bool",
+		"enableStaticNavigation": "PropTypes.bool",
+		"staticNavigationOptions": "PropTypes.object"
   },
   "defaultProps": {
-    "title": "Test uniqueness",
-    "titleColor": "#000",
-    "backgroundColor": "white",
-    "layout": "hero",
-    "numberOfItems": 6,
-    "textColor": "black",
-    "heroImageBackgroundColor": "#2980b9",
-    "thumbnailAlignment": "left"
-  },
-  "propChoices": {
-    "layout": [
-      "hero",
-      "list"
-    ]
-  },
-  "FRN_resourceEndpoints": [
-    {
-      "url": "",
-      "type": "json"
-    }
-  ]
+ 		"enableSearch": true,
+		"backgroundColor": "#FFF",
+		"subNavstackBackgroundColor": "#FFF",
+		"textColor": "#000",
+		"borderOptions": {
+			"top": {
+				"enable": true,
+				"color": "#de2828"
+			},
+			"bottom": {
+				"enable": true,
+				"color": "#de2828"
+			}
+		},
+		"menuItemHoverStyle": {},
+		"menuItemStyle": {},
+		"searchOptions": {
+			"numberItems": 10,
+			"backgroundColor": "#FFF",
+			"textColor": "#000",
+			"textAlignment": "right",
+			"displayResultsOnNewPage": true
+		},
+		"gridIconColor": "#000",
+		"enableDropDownMenu": true,
+		"staticNavigationOptions": {
+			"backgroundColor": "#ccc",
+			"textColor": "#000",
+			"menuItemHoverStyle": {}
+		},
+		"weatherWidget": {
+			"id": "components/weather/CurrentConditionsAtAGlance",
+			"props": {
+				"link": "/weather",
+				"showCityName": true,
+				"transitionTimeInSeconds": 3,
+				"textColor": "#817f7f",
+				"textSize": "large",
+				"iconSize": "large",
+				"zipcodeData": {
+					"FRN_resourceEndpoints": [{
+						"type": "json",
+						"url": "/api/integrations/wsi/current?zipcode=${zipcode}"
+					}]
+				}
+			},
+			"FRN_resourceEndpoints": [{
+				"type": "json",
+				"url": "/api/integrations/wsi/current"
 }
