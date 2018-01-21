@@ -70,4 +70,5 @@
 			"FRN_resourceEndpoints": [{
 				"type": "json",
 				"url": "/api/integrations/wsi/current"
+			}]
 }
